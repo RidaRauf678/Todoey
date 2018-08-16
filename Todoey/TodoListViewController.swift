@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Todoey
 //
-//  Created by Tianna Henry-Lewis on 2018-08-13.
+//  Created by Tianna Henry-Lewis on 2018-08-13..
 //  Copyright © 2018 Tianna Henry-Lewis. All rights reserved.
 //
 
@@ -12,9 +12,15 @@ class TodoListViewController: UITableViewController {
     
     var itemArray = ["Find Mike", "Buy Eggos", "Destroy Demogorgon"]
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if let items = defaults.array(forKey: "TodoListArray") as? [String] {
+            itemArray = items
+        }
+        
     }
     
     //MARK: - Tableview Datasource Methods
@@ -62,6 +68,9 @@ class TodoListViewController: UITableViewController {
             //What will happen once th user clicks the add item button on the UIAlert
             //Add item user entered and add the item to the itemArray
             self.itemArray.append(textField.text!)
+            
+            self.defaults.set(self.itemArray, forKey: "TodoListArray")
+            
             self.tableView.reloadData()
         }
         
