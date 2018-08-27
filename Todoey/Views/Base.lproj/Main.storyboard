@@ -42,12 +42,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" id="Shf-2A-CAW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="v3S-As-m3T">
-                            <color key="tintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="Oq1-KI-Vo8" id="DsW-WA-3Ih"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="JVf-hK-7qN" id="Eyw-tn-4YW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGS-ap-UUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,11 +60,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ddv-dC-fMV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c6G-cN-CoX">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="c6G-cN-CoX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.45098039215686275" green="0.9882352941176471" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -79,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="567" y="115"/>
         </scene>
-        <!--Todoey-->
+        <!--Lists-->
         <scene sceneID="Uos-iV-b8l">
             <objects>
                 <tableViewController id="vun-mn-v0D" customClass="CategoryViewController" customModule="Todoey" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,9 +104,8 @@
                             <outlet property="delegate" destination="vun-mn-v0D" id="43G-Nu-J2v"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Todoey" id="bcc-f7-LbA">
+                    <navigationItem key="navigationItem" title="Lists" id="bcc-f7-LbA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="XsV-pm-dJV">
-                            <color key="tintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="vun-mn-v0D" id="9pq-99-ywq"/>
                             </connections>
